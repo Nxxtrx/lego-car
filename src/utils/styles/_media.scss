@@ -3,7 +3,7 @@
     &:hover {
       @content
     }
-  }
+  };
 
   @media (hover: none) {
     &:active {

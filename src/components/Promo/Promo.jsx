@@ -1,15 +1,17 @@
-import './Promo.scss'
+import React, { useEffect } from 'react'
 import diagnosticCarImage from '../../utils/images/promo-diagnostic-car.png'
 import onlineShowCarImage from '../../utils/images/promo-online-show-car.png'
 import backgroundPlayImage from '../../utils/images/promo-play-img.svg'
 import phoneImage from './../../utils/images/promo-phone-img.png'
 import backgroundLenseImage from './../../utils/images/promo-lense.svg'
 import markCarImage from '../../utils/images/promo-mark-car.png'
+import './Promo.scss'
 
-const Promo = () => {
+const Promo = ({mobileView}) => {
+
   return (
     <section className="promo container">
-      <h2 className="promo__title">Теперь услуги дилерского центра Вы можете можете получить онлайн!</h2>
+      <h2 className="promo__title">Теперь услуги дилерского центра Вы можете получить онлайн!</h2>
       <div className="promo__container">
         <div className="promo__card card">
           <h3 className="card__title">Диагностика автомобиля<br/> перед покупкой</h3>
@@ -33,7 +35,7 @@ const Promo = () => {
         <div className="promo__card card">
           <h3 className="card__title">Онлайн оценка автомобиля с<br/> пробегом</h3>
           <p className="card__description">Узнайте предварительную стоимость<br/> автомобиля за 1 мин, указав его параметры</p>
-          <button className="card__btn">Оценить</button>
+          <button className="card__btn">{`${mobileView ? "Оставить заявку" : "Оценить"}`}</button>
           <img className='card__image' src={markCarImage} alt="" />
           <img className ="card__background-image" src={backgroundLenseImage} alt="" />
         </div>

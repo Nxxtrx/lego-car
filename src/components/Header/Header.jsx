@@ -1,16 +1,47 @@
+import React, {useState, useRef, useEffect} from 'react'
 import headerLogo from '../../utils/images/header-logo.svg'
 import locationPinImg from '../../utils/images/map-pin.svg'
 import locationRouteImg from '../../utils/images/map-location.svg'
 import locationClockImg from '../../utils/images/map-clock.svg'
 import'./Header.scss'
 
-const Header = () => {
+const Header = ({mobileView}) => {
+  const [opened, setOpened] = useState(false)
+  const modalRef = useRef(null)
+
+  const handleOpenBurgerMenu = () => {
+    setOpened(true)
+  }
+
+  const handleCloseBurgerMenu = () => {
+    setOpened(false)
+  }
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setOpened(false);
+    }
+  };
+
+  useEffect(() => {
+    if (opened) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [opened]);
+
   return (
     <header className="header">
       <div className="header__delimiter">
       <div className="header__container container">
         <img className='header__logo' src={headerLogo} alt="Логотип Changan Auto"/>
-        <nav className='header__menu-container'>
+        <nav ref={modalRef} className={`header__menu-container ${opened ? 'header__menu-container_type_opened' : ''}`}>
+          <button className='header__burger-close' onClick={handleCloseBurgerMenu}></button>
           <ul className='header__menu'>
             <li className='header__menu-item'>
               <a className='header__menu-link' href="#">Автомобили в наличии</a>
@@ -30,6 +61,7 @@ const Header = () => {
           </ul>
         </nav>
         <button className='header__call-btn'>Заказать звонок</button>
+        {mobileView && <button className='header__burger-btn' onClick={handleOpenBurgerMenu}></button>}
         </div>
       </div>
       <div className='location container'>
