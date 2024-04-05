@@ -1,0 +1,69 @@
+.header{
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+  background-color: var(--color-light);
+  &__container{
+    margin-top: 19px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu-container{
+    margin-inline: auto 56px;
+  }
+
+  &__menu{
+    display: flex;
+    gap: 32px;
+  }
+
+  &__menu-link{
+    color: var(--color-grey);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  &__call-btn {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    letter-spacing: 0.03em;
+    line-height: 1.7;
+    width: 204px;
+    height: 40px;
+    border-radius: var(--border-radius-large);
+    transition: background-color var(--transition-duration) ease;
+
+    &:hover{
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  &__delimiter {
+    border-bottom: 1px solid var(--color-light-grey);
+  }
+
+  .location{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding-bottom: 12px;
+    
+    &__change-store {
+      line-height: 1.2;
+      font-size: 12px;
+    }
+
+    &__store{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__store_type_driveway {
+      margin-inline: 32px auto;
+    }
+
+  }
+}
+

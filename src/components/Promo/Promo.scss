@@ -1,0 +1,122 @@
+.promo {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--color-dark);
+    font-weight: 500;
+    margin-top: 56px;
+  }
+}
+
+.promo__container {
+  margin-top: 31px;
+  display: grid;
+  grid-template-columns: repeat(3, 424px);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  margin-left: 2px;
+
+
+  .card {
+    color: var(--color-white);
+    background: linear-gradient(87deg, rgba(18, 18, 18, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background-image: url('../../utils/images/Rectangle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-large);
+    padding-top: 32px;
+    position: relative;
+    overflow: hidden;
+    max-height: 512px;
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.222;
+      margin-left: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__description {
+      line-height: 1.28;
+      margin-top: 12px;
+      margin-left: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__btn {
+      position: relative;
+      z-index: 2;
+      margin-left: 32px;
+      margin-top: 32px;
+      color: var(--color-white);
+      padding: 13px 28px;
+      border: 1px solid var(--color-white);
+      border-radius: var(--border-radius-small);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background-color var(--transition-duration) ease;
+
+      &:hover {
+        background-color: var(--color-white-hover);
+      }
+    }
+  }
+
+  .card:first-child {
+    grid-area: 1 / 1 / 3 / 2;
+    .card__image {
+      margin-top: 106px;
+      margin-left: 12px;
+      margin-bottom: 10px;
+    }
+  };
+
+  .card:nth-child(2) {
+    grid-area: 1/2/2/3;
+    .card__background-image {
+      position: absolute;
+      bottom: 0;
+      right: 57px;
+      z-index: 0;
+    }
+    .card__image{
+      position: absolute;
+      z-index: 2;
+      top: 132px;
+      left: 245px
+    }
+  };
+
+  .card:nth-child(3){
+    grid-area: 2/2/3/3;
+    .card__image{
+      position: absolute;
+      top: 95px;
+      left: 270px
+    }
+    .card__btn{
+      padding-inline: 33px;
+    }
+  };
+
+  .card:last-child{
+    grid-area: 1 / 3 / 3 / 4;
+    .card__background-image {
+      position: absolute;
+      top: 251px;
+      right: 136px;
+    }
+    .card__image{
+      width: 347px;
+      position: absolute;
+      bottom: 13px;
+      right: 11px;
+      z-index: 2;
+    }
+  };
+
+}
