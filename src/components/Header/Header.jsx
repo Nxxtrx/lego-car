@@ -44,19 +44,19 @@ const Header = ({mobileView}) => {
           <button className='header__burger-close' onClick={handleCloseBurgerMenu}></button>
           <ul className='header__menu'>
             <li className='header__menu-item'>
-              <a className='header__menu-link' href="#">Автомобили в наличии</a>
+              <a className='header__menu-link' href="/">Автомобили в наличии</a>
             </li>
             <li className='header__menu-item'>
-              <a className='header__menu-link' href="#">Спецпредложения</a>
+              <a className='header__menu-link' href="/">Спецпредложения</a>
             </li>
             <li className='header__menu-item'>
-              <a className='header__menu-link' href="#">Продать авто</a>
+              <a className='header__menu-link' href="/">Продать авто</a>
             </li>
             <li className='header__menu-item'>
-              <a className='header__menu-link' href="#">Сервис</a>
+              <a className='header__menu-link' href="/">Сервис</a>
             </li>
             <li className='header__menu-item'>
-              <a className='header__menu-link' href="#">Контакты</a>
+              <a className='header__menu-link' href="/">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -67,15 +67,15 @@ const Header = ({mobileView}) => {
       <div className='location container'>
         <div className='location__store'>
           <img src={locationPinImg} alt="местонахождение магазина" />
-          <a href='#' className='location__change-store'>Олимпийский просп., 5, стр. 1, Москва</a>
+          <a href='/' className='location__change-store'>Олимпийский просп., 5, стр. 1, Москва</a>
         </div>
         <div className='location__store location__store_type_driveway'>
           <img src={locationRouteImg} alt="иконка маршрута" />
-          <a href='#' className='location__change-store'>Проложить маршрут</a>
+          <a href='/' className='location__change-store'>Проложить маршрут</a>
         </div>
         <div className='location__store'>
           <img src={locationClockImg} alt="иконка маршрута" />
-          <a href='#' className='location__change-store'>9:00 - 21:00 (ежедневно)</a>
+          <a href='/' className='location__change-store'>9:00 - 21:00 (ежедневно)</a>
         </div>
       </div>
     </header>

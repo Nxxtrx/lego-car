@@ -18,6 +18,7 @@ const Promo = ({mobileView}) => {
           <p className="card__description">Расскажем обо всех скрытых дефектах<br/> автомобиля с пробегом</p>
           <button className="card__btn">Записаться</button>
           <img className='card__image' src={diagnosticCarImage} alt="" />
+          <div className='card__gradient-filter'></div>
         </div>
         <div className="promo__card card">
           <h3 className="card__title">Онлайн показ автомобиля по<br/> видеосвязи</h3>
@@ -25,12 +26,14 @@ const Promo = ({mobileView}) => {
           <button className="card__btn">Оставить заявку</button>
           <img className='card__image' src={onlineShowCarImage} alt="" />
           <img className ="card__background-image" src={backgroundPlayImage} alt="" />
+          <div className='card__gradient-filter'></div>
         </div>
         <div className="promo__card card">
           <h3 className="card__title">Онлайн бронирование</h3>
           <p className="card__description">Забронируйте понравившийся<br/> автомобиль без визита в дилерский центр</p>
           <button className="card__btn">Забронировать</button>
           <img className='card__image' src={phoneImage} alt="" />
+          <div className='card__gradient-filter'></div>
         </div>
         <div className="promo__card card">
           <h3 className="card__title">Онлайн оценка автомобиля с<br/> пробегом</h3>
@@ -38,6 +41,7 @@ const Promo = ({mobileView}) => {
           <button className="card__btn">{`${mobileView ? "Оставить заявку" : "Оценить"}`}</button>
           <img className='card__image' src={markCarImage} alt="" />
           <img className ="card__background-image" src={backgroundLenseImage} alt="" />
+          <div className='card__gradient-filter'></div>
         </div>
       </div>
     </section>
