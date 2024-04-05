@@ -5,7 +5,7 @@ import './App.scss';
 
 function App() {
 
-  const [mobileView, setMobileView] = React.useState(false)
+  const [mobileView, setMobileView] = React.useState(window.innerWidth <=1199 ? true : false)
 
   React.useEffect(() => {
     const handleResize = () => {
